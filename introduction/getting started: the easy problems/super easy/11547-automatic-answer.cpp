@@ -3,11 +3,21 @@
 
 using namespace std;
 
-string str;
+int t, n;
 
 int main() {
 	fastio;
 	
-	while(getline(cin, str)) cout<<str<<"\n";
+	scanf("%d", &t);
+	
+	while(t--) {
+		scanf("%d", &n);
+		
+		n = (315 * n) + 36962;
+		n = (n / 10) % 10;
+		printf("%d\n", abs(n));
+	}
+
 	return 0;
 }
+
