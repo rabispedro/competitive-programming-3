@@ -15,16 +15,18 @@ int main() {
 		cin>>str;
 		
 		if(str.size() == 5) resp = 3;
-		else if(
-		
-		(str.at(0) == 't' && str.at(0) == 'w')
-		|| (str.at(0) == 't' && str.at(2) == 'o')
-		|| (str.at(1) == 'w' && str.at(2) == 'o')
-		) resp = 2;
-		else resp = 1;
+		else if (str.size() == 3){
+			if(
+				(str.at(0) == 'o' && str.at(1) == 'n')
+				|| (str.at(0) == 'o' && str.at(2) == 'e')
+				|| (str.at(1) == 'n' && str.at(2) == 'e')
+			) resp = 1;
+			else resp = 2;
+		}
 		
 		cout<<resp<<"\n";
 	}
+	
 
 	return 0;
 }
